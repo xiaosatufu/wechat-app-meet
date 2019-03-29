@@ -11,7 +11,11 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    like:false,
+    count1:11,
+    count2:22,
+    yesSrc:'images/like.png',
+    noSrc:'images/like@dis.png'
   },
 
   /**
