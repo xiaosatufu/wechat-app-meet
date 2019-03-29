@@ -1,0 +1,26 @@
+/* pages/classic/classic.wxss */
+
+.container {
+  /* display: flex; */
+  /* flex-direction: row-reverse; */
+  /* justify-content: space-evenly; */
+}
+
+.chunk {
+  width: 100px;
+  height: 100px;
+  /* flex: 1; */
+  /* background: brown; *//*  display: inline-block */
+}
+
+.color1 {
+  background: red;
+}
+
+.color2 {
+  background: yellow;
+}
+
+.color3 {
+  background: blue;
+}

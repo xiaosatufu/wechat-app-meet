@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/classic/classic",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "遇见",
+    "navigationBarTextStyle": "black"
+  }
+}
