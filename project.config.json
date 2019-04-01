@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
 	"appid": "wx181475cfbf0e6838",
-	"projectname": "meet",
+	"projectname": "wechat-app-meet",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
