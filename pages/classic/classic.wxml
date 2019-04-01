@@ -1,11 +1,11 @@
 <!--pages/classic/classic.wxml-->
-<!-- <text>pages/classic/classic.wxml</text> -->
-<view class="container">
-  <!-- <view class="chunk color1">1
+
+<view class='container'>
+  <view class="header">
+
+    <v-epsoide class="epsoide" index="{{classic.index}}" />
+    <v-like class="like" bindlike="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}" />
   </view>
-  <view class="chunk color2">2
-  </view>
-  <view class="chunk color3">3
-  </view> -->
-  <v-like />
+  <v-movie img="{{classic.image}}" content="{{classic.content}}" />
+  <v-navi bind:left="onNext" bind:right="onPrev" class="navi" first="{{first}}" latest="{{latest}}" title="{{classic.title}}" />
 </view>
