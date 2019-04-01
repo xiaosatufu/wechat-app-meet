@@ -36,13 +36,6 @@ Component({
         count: count
       })
 
-      let like = this.properties.like
-      let count = this.properties.count
-
-      this.setData({
-        count: like ? count - 1 : count + 1,
-        like: !like
-      })
 
       let behavior = this.properties.like ? 'like' : 'cancel'
       this.triggerEvent('like', {
