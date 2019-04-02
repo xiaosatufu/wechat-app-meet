@@ -27,9 +27,12 @@ Component({
     playSrc: 'images/player@play.png'
   },
 
-
-  detached:function(){
-    mMgr.stop()
+  attached: function() {
+    this._recoverStatus()
+    this._monitorSwitch()
+  },
+  detached: function() {
+    // mMgr.stop()
   },
   /**
    * 组件的方法列表
@@ -37,15 +40,15 @@ Component({
   methods: {
     onPlay(event) {
 
-      if(!this.data.playing) {
+      if (!this.data.playing) {
         this.setData({
-          playing:true
+          playing: true
         })
         mMgr.src = this.properties.src
         mMgr.title = this.properties.title
       } else {
         this.setData({
-          playing:false
+          playing: false
         })
         mMgr.pause()
       }
@@ -62,7 +65,38 @@ Component({
       // }
 
 
+    },
+    _recoverStatus: function() {
+      if (mMgr.paused) {
+        this.setData({
+          playing: false
+        })
+        return
+      }
+      if (mMgr.src == this.properties.src) {
+        this.setData({
+          playing: true
+        })
+      }
+    },
+    _monitorSwitch: function() {
+      mMgr.onPlay(() => {
+        this._recoverStatus()
+      })
+      mMgr.onPause(() => {
+        this._recoverStatus()
+      })
+      mMgr.onStop(() => {
+        this._recoverStatus()
+      })
+      mMgr.onEnded(() => {
+        this._recoverStatus()
+      })
     }
+
+
+
+
   }
 })
 

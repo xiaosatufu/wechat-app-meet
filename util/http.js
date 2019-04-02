@@ -3,9 +3,9 @@ import {
 } from '../config.js'
 
 const tips = {
-  1:'错误',
-  1005:'appkey 无效',
-  3000:'期刊不存在'
+  1: '错误',
+  1005: 'appkey 无效',
+  3000: '期刊不存在'
 }
 
 class HTTP {
