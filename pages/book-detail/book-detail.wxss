@@ -215,7 +215,7 @@
   padding: 40rpx 30rpx 0 30rpx;
 }
 
-.detail-contaner {
+.detail-container {
   width: 100%;
   display: flex;
   flex-direction: row;
